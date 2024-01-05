@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Serif+Display:wght@400;500;600;700&display=swap');
+
+
+
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Noto Serif Display', serif;
+$black-color: rgb(29, 29, 29);
+$white-color: #F0F1FA;
+$grey-color: #9C9C9C;
+$blue-color: #3A47F4;
+$yellow-color: rgb(255, 204, 0);
+
+
+$max-width: 1800px;
+$title-size: 11em;
+$tiny-size: 12px;
+$header-size: 2.1em;
+$base-font-size: 14px; 
+
+@mixin maxWidth {
+    max-width: $max-width;
+    margin: auto;
+}
+@mixin padding {
+    padding: 20px 4vw;
+    margin: auto;
+    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+        padding: 20px 12px;
+    }
+}
+
+
+//breakpoints
+$breakpoints: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 2000px
+);

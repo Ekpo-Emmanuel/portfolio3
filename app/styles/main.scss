@@ -1,31 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Serif+Display:wght@400;500;600;700&display=swap');
+@import './base.scss';
+
+//components
+@import './components/_header.scss';
+
+// pages
+@import './pages/home.scss';
+@import './pages/_project.scss';
 
 
 
-$primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Noto Serif Display', serif;
-$black-color: rgb(18, 18, 18);
-$white-color: #F0F1FA;
-$grey-color: #9C9C9C;
-$blue-color: #3A47F4;
-
-
-$max-width: 1800px;
-$title-size: 11em;
-$tiny-size: 12px;
-$header-size: 2.1em;
-
-$base-font-size: 13px; 
-
-
-//breakpoints
-$breakpoints: (
-    'sm': 576px,
-    'md': 768px,
-    'lg': 992px,
-    'xl': 1200px,
-    'xxl': 2000px
-);
 
 * {
     font-family: $primary-font;
@@ -37,10 +20,9 @@ $breakpoints: (
 }
 
 body {
-    background-color: $white-color;
+    // background-color: $white-color;
 }
-
-
-@import './pages/_project.scss';
-@import './components/_header.scss';
-@import './pages/home.scss';
+::selection {
+    background-color: $yellow-color;
+    color: $black-color;
+  }

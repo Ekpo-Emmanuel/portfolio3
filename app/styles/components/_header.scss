@@ -1,36 +1,173 @@
 nav 
 {
-    // background: red;
-    display: flex;
     position: fixed;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 10px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: space-between;
-    -webkit-backdrop-filter: blur(500px);    
-    backdrop-filter: blur(500px);
-    padding: 8px 30px;
-    z-index: 1;
-
-    .links {
-        ul {
+    width: 100%;
+    top: 0;
+    z-index:  1000;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        @include maxWidth;
+        @include padding;
+        .menu-container {
             display: flex;
-            li {
-                // margin: 0 10px;
-                text-transform: uppercase;
-                font-size: $base-font-size;
-                padding: 5px 20px;
+            align-items: center;
+            .svg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white-color;
+                padding: 5px;
+                height: 20px;
+                width: 20px;
                 border-radius: 50px;
-                transition: .3s ease;
-                // font-weight: bold;
+                svg {
+                    height: 17px;
+                }
+            }
+            .menu {
+                background-color: $white-color;
+                padding: 6px 14px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100px;
+                cursor: pointer;
+                span {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: $base-font-size;
+                    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                        font-size: 13px;
+                    }
+                }
+                .rotate {
+                    transform: rotate(90deg);
+                }
+                .dots {
+                    display: flex;
+                    gap: 4px;
+                    transition: .3s ease;
+                    div {
+                        height: 5px;
+                        width: 5px;
+                        border-radius: 50px;
+                        background-color: $black-color;
+                        @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                            height: 4px;
+                            width: 4px;
+                        }
+                    }
+                }
+            }
+        }
+        .links {
+            position: absolute;
+            top: 90%;
+            right: 4vw;
+            width: 18em;
+            margin: auto;
 
-                // &:hover {
-                //     cursor: pointer;
-                //     background-color: $blue-color;
-                // }
+            ul {
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 5px 25px;
+                outline: 1px solid $black-color;
+                @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                    margin: 10px;
+                    padding: 5px 20px;  
+                }
+                li {
+                    display: flex;
+                    position: relative;
+                    margin: 18px 0;
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    font-size: 20px;
+                    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                        margin: 20px 0;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 4px;
+                        width: 4px;
+                        background-color: $black-color;
+                        border-radius: 50px;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transform: translateX(10px);
+                        transition: .3s ease;
+                        opacity: 0;
+                    }
+                    &:hover::after {
+                        transform: translateX(0px);
+                        opacity: 1;
+                    }
+                }
+            }
+            ul:nth-child(2),
+            ul:nth-child(3) {
+                padding: 2px 25px;
+                margin-top: 10px;
+                @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                    padding: 2px 20px;  
+                }
+            }
+            ul:nth-child(2) li::after,
+            ul:nth-child(3) li::after {
+                display: none;
+            }
+            ul:nth-child(2) {
+                li {
+                    margin: 15px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span {
+                        svg {
+                            stroke-width: 1.2;
+                        }
+                    }
+                    svg:nth-child(2) {
+                        stroke-width: 1.2;
+                        // transform: scale(1.4);
+                    }
+                }
+            }
+            ul:nth-child(3) {
+                background-color: $blue-color;
+                outline: none;
+                li {
+                    margin: 15px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span {
+                        color: $white-color;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        font-weight: 600;
+                        svg {
+                            stroke: #fff;
+                            stroke-width: 1.2;
+                        }
+                    }
+                    svg:nth-child(2) {
+                        stroke: #fff;
+                        stroke-width: 1.2;
+                        transform: scale(1.3);
+                    }
+                }
+                &:hover {
+                    background-color: $black-color;
+                }
             }
         }
     }
