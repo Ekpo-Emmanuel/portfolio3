@@ -6,8 +6,9 @@
         flex-direction: column;
         @include maxWidth;
         @include padding;
+        gap: 60px;
         @media (max-width: map-get($breakpoints, 'sm')) {
-            //  gap: 40px;
+             gap: 40px;
          }
         .section1 {
             p {
@@ -73,7 +74,6 @@
              }
              @media (max-width: map-get($breakpoints, 'sm')) {
                  gap: 40px 25px; 
-                 transform: translateY(-40px);
              }
              .item {
                  display: flex;
