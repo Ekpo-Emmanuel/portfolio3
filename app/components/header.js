@@ -21,9 +21,11 @@ function Header() {
   return (
     <nav>
       <div className='container'>
-        <div className='logo'>
-          <img src='./assets/images/logo_dark.png' alt='logo' height={25} />
-        </div>
+        <Link href="/">
+          <div className='logo'>
+            <img src='./assets/images/logo_dark.png' alt='logo' height={25} />
+          </div>
+        </Link>
         <div className='menu-container'>
           <div className='svg'>
             {/* <Sun />  */}

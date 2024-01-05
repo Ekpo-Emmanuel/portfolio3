@@ -1,16 +1,13 @@
-// @import './mixins.scss';
-
 
 .project {
     padding-top: 100px;      
     .container {  
         display: flex;
         flex-direction: column;
-        gap: 80px;
         @include maxWidth;
         @include padding;
         @media (max-width: map-get($breakpoints, 'sm')) {
-             gap: 40px;
+            //  gap: 40px;
          }
         .section1 {
             p {
@@ -34,8 +31,7 @@
             align-items: center;
             margin: 20px 0;
             @media (max-width: map-get($breakpoints, 'sm')) {
-                margin-top: 20px;
-                flex-direction: column;
+                display: grid;
                 gap: 10px;
                 p {
                     width: 100%;
@@ -52,32 +48,38 @@
                 gap: 5px;
                 margin-left: 5px;
                 li {
-                    background-color: $yellow-color;
+                    background-color: $white-color;
                     border-radius: 50px;
                     padding: 1px 10px;
                     font-size: 12px;
                     letter-spacing: -1px;
+                    cursor: pointer;
+                }
+                .active {
+                    font-weight: 600;
+                    background-color: $yellow-color;
+                    outline: 1px solid $black-color;
                 }
             }
         }
         .section2 {
          .project-container {
              display: grid; 
-             grid-template-columns: 1fr; 
+             grid-template-columns: 1fr 1fr; 
              gap: 70px 25px; 
-     
+            
              @media (max-width: map-get($breakpoints, 'lg')) {
                  grid-template-columns: 1fr; 
              }
              @media (max-width: map-get($breakpoints, 'sm')) {
                  gap: 40px 25px; 
+                 transform: translateY(-40px);
              }
              .item {
                  display: flex;
                  flex-direction: column;
                  transition: .3s ease-in-out;
                  &:hover {
-                     cursor: pointer;
                      .image {
                          overflow: hidden;
                          img {
@@ -87,26 +89,53 @@
                  }
                  .image {
                      // width: 579px;
-                     height: 376px;
-                     // border-radius: 10px;
+                     height: 476px;
                      overflow: hidden;
                      position: relative;
      
-                     border-radius: 10px;
-     
+                     border-radius: 20px;
                      @media (max-width: map-get($breakpoints, 'sm')) {
-                         height: 247px;
+                         height: 300px;
                      }
                      img {
                          width: 100%;
                          height: 100%;
                          object-fit: cover;
-                         // display: none;
-                         // border-radius: 10px; 
                          transition: 2s ease-in-out;
                          @media (max-width: map-get($breakpoints, 'sm')) {
                              border-radius: 5px;
                          }
+                     }
+                     .redirects {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        // opacity: 0;
+                        @media (max-width: map-get($breakpoints, 'sm')) {
+                           transform: scale(0.8);
+                           right: -5px;
+                        }
+                        span {
+                            display: inline;
+                            background-color:#fff;
+                            padding: 3px 10px;
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            border-radius: 50px;
+                            outline: 1px solid $black-color;
+                        }
+                        svg {
+                            background-color: $yellow-color;
+                            border-radius: 10px;
+                            padding: 10px;
+                            outline: 1px solid $black-color;
+                        }
+                        @media (max-width: map-get($breakpoints, 'sm')) {
+                            opacity: 1;
+                        }
                      }
                  }
                  .details {
@@ -115,7 +144,7 @@
                      gap: 3px;
      
                      .stack {
-                         margin-top: 10px;
+                         margin-top: 20px;
                          @media (max-width: map-get($breakpoints, 'sm')) {
                              margin-top: 15px;
                          }
