@@ -30,10 +30,11 @@
             flex-direction: row;
             justify-content: unset;
             align-items: center;
-            margin: 20px 0;
+            margin: 30px 0;
             @media (max-width: map-get($breakpoints, 'sm')) {
                 display: grid;
                 gap: 10px;
+                margin: 20px 0;
                 p {
                     width: 100%;
                     background-color: inherit;
