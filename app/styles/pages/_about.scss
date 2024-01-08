@@ -1,0 +1,97 @@
+.aboutMe {
+    // background-color: $white-color;
+    // padding-top: 140px;
+    .container {
+        @include maxWidth;
+        @include padding;
+        display: grid;
+        grid-template-columns: 1fr;
+        font-family: $third-font;
+        .sec1 {
+            display: grid;
+            grid-template-columns: .2fr 1fr;
+            gap: 50px;
+            align-items: center;
+            border-bottom: 1px solid $black-color;
+            padding: 150px 0;
+            @media screen and (max-width: map-get($breakpoints, 'lg')) {
+                grid-template-columns: 1fr;
+                padding-bottom: 50px;
+            }
+            img {
+                width: 409px;
+                height: auto;
+                border-radius: 5px;
+                @media screen and (max-width: map-get($breakpoints, 'lg')) {
+                    display: none;
+                }
+            }
+            .details {
+                display: flex;
+                flex-direction: column;
+                .title {
+                    font-size: $header-size;
+                    letter-spacing: -1px;
+                    font-family: $third-font;
+                    @media screen and (max-width: map-get($breakpoints, 'md')) {
+                        font-size: 1.6em;
+                    }
+                    @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                        font-size: 1.4em;
+                    }
+                }
+                span {
+                    margin: 20px 0;
+                    display: inline;
+                    font-size: $tiny-size;
+                    font-family: $third-font;
+                }
+                .desc {
+                    display: block;
+                    font-size: 15px;
+                    line-height: 25px;
+                    font-family: $third-font;
+                }
+                .stack {
+                    display: flex;
+                    gap: 10px;
+                    svg {
+                        height: 20px;
+                        opacity: .6;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .sec2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 150px 0;
+            gap: 40px;
+            border-bottom: 1px solid $black-color;
+            @media screen and (max-width: map-get($breakpoints, 'lg')) {
+                padding: 50px 0;
+            }
+            @media screen and (max-width: map-get($breakpoints, 'md')) {
+                grid-template-columns: 1fr ;
+            }
+            .title {
+                font-size: $header-size;
+                text-transform: capitalize;
+                font-weight: 500;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                cursor: default;
+                span {
+                    font-size: 15px;
+                    font-family: $third-font;
+                }
+            }
+        }
+    }
+}

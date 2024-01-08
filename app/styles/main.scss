@@ -2,10 +2,12 @@
 
 //components
 @import './components/_header.scss';
+@import './components/_footer.scss';
 
 // pages
 @import './pages/home.scss';
 @import './pages/_project.scss';
+@import './pages/_about.scss';
 
 
 
@@ -19,10 +21,24 @@
     color: $black-color;
 }
 
-body {
-    // background-color: $white-color;
-}
+// body {
+//     background-color: $white-color;
+// }
 ::selection {
     background-color: $yellow-color;
     color: $black-color;
   }
+
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; 
+}
+::-webkit-scrollbar-track {
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 24px;
+  background-color: $black-color;
+}

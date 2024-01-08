@@ -1,0 +1,52 @@
+footer {
+    // height: 300px;
+    background-color: $white-color;
+    .container {
+        @include maxWidth;
+        @include padding;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 60px;
+        margin-top: 130px;
+
+    }
+    .title {
+        font-size: $header-size;
+        letter-spacing: -1px;
+        font-weight: 900;
+        text-transform: capitalize;
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media (max-width: map-get($breakpoints, 'sm')) {
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+        span {
+            display: inline;
+            font-size: $tiny-size;
+        }
+        .link {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            @media (max-width: map-get($breakpoints, 'sm')) {
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: $tiny-size;
+                text-transform: uppercase;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                svg {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

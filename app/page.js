@@ -1,6 +1,9 @@
+"use client"
+
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'; 
- 
+import ProjectContainer from './(pages)/projects/ProjectContainer';
+import projectList from './(pages)/projects/projectList';
 
 const Hero = () => {
   return (
@@ -18,9 +21,16 @@ const Hero = () => {
 }
 
 export default function Page() {
+  const trimmedProjectList = projectList.slice(0, 4);
   return (
     <>
       <Hero />
+      <div className='divider'>
+        <ProjectContainer isHomepage={true} projects={trimmedProjectList}/>
+        <div className='see-more'>
+          <Link href={"/projects"}><span>See all projects</span></Link>
+        </div>
+      </div>
      </>
   )
 }

@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <nav>
-      <div className='container'>
+      <div className={open ? 'container min' : 'container'}>
         <Link href="/">
           <div className='logo'>
             <img src='./assets/images/logo_dark.png' alt='logo' height={25} />
@@ -51,7 +51,7 @@ function Header() {
             <ul>
                 <li>
                   <span>
-                    <Link href="/contact"><span>Let's Talk</span></Link>
+                    <Link href="https://ideavault.000webhostapp.com/Blog/index.php" target={"_blank"}><span>Blog</span></Link>
                   </span>
                   <Send />
                 </li>
