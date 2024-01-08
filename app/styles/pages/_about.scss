@@ -65,7 +65,7 @@
                 }
             }
         }
-        .sec2 {
+        .sec2, .sec3, .sec4 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             padding: 150px 0;
@@ -81,16 +81,32 @@
                 font-size: $header-size;
                 text-transform: capitalize;
                 font-weight: 500;
+                @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                    font-size: 1.4em;
+                    letter-spacing: -1px;
+                }
             }
             div {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
+                @media screen and (max-width: map-get($breakpoints, 'sm')) {
+                    gap: 10px;
+                }
                 cursor: default;
                 span {
                     font-size: 15px;
                     font-family: $third-font;
                 }
+            }
+        }
+        .sec3 {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media (max-width: map-get($breakpoints, 'lg')) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: map-get($breakpoints, 'md')) {
+                grid-template-columns: 1fr;
             }
         }
     }

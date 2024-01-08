@@ -21,7 +21,7 @@ const About = () => {
     }, 
     {
       'title': 'Mail',
-      'url': 'ekpoemmanuelsg@gmail.com',
+      'url': 'http://ekpoemmanuelsg@gmail.com',
       'icon': <MailCheck />
     }, 
     {
@@ -69,8 +69,28 @@ const About = () => {
             <span>Cross-Functional Team Building</span>
           </div>
         </div>
-        <div className='sec3'></div>
-        <div className='sec4'></div>
+        <div className='sec3'>
+        <span className='title'>Tech Stack</span>
+          <div className='set1'>
+            <span>HTML, CSS</span>
+            <span>Typescript React.JS Next.JS</span>
+            <span>Express.js - Node.js</span>
+            <span>Laravel - PHP </span>
+            <span>Java - TestNG, Spring Boot, Python</span>
+            <span>Game Design and Development</span>
+          </div>
+          <div className='set1'>
+            <span>MySQL, PostgreSQL</span>
+            <span>MongoDB, Redis</span>
+            <span>Docker, Kubernetes</span>
+            <span>Jenkins</span>
+          </div>
+          <div className='set1'>
+            {/* <span>AWS</span> */}
+            <span>Google Cloud Platform</span>
+            <span>Wordpress, Joomla</span>
+          </div>
+        </div>
         <div className='sec5'></div>
       </div>
     </section>

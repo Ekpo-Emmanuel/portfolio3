@@ -27,10 +27,10 @@ function Header() {
           </div>
         </Link>
         <div className='menu-container'>
-          <div className='svg'>
-            {/* <Sun />  */}
+          {/* <div className='svg'>
+              <Sun /> 
               <Moon />
-          </div>
+          </div> */}
           <div className='menu' onClick={toggleMenu}>
             <span>{open ? 'Close' : 'Menu'}</span>
             <div className={open ? 'dots rotate' : 'dots'}>

@@ -21,7 +21,7 @@ const Hero = () => {
 }
 
 export default function Page() {
-  const trimmedProjectList = projectList.slice(0, 4);
+  const trimmedProjectList = projectList.slice(0, 3);
   return (
     <>
       <Hero />
