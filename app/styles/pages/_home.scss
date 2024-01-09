@@ -102,8 +102,11 @@
                     height: 476px;
                     overflow: hidden;
                     position: relative;
+                    @media (max-width: map-get($breakpoints, 'md')) {
+                        height: 400px;
+                    }
                     @media (max-width: map-get($breakpoints, 'sm')) {
-                        height: 250px;
+                        height: 350px;
                         border-radius: 10px;
                     }
                     img {

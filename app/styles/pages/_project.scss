@@ -95,8 +95,11 @@
                      position: relative;
      
                     //  border-radius: 20px;
-                     @media (max-width: map-get($breakpoints, 'sm')) {
-                         height: 300px;
+                    @media (max-width: map-get($breakpoints, 'md')) {
+                        height: 400px;
+                    }
+                    @media (max-width: map-get($breakpoints, 'sm')) {
+                         height: 350px;
                      }
                      img {
                          width: 100%;
