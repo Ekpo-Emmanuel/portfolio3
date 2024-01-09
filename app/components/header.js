@@ -1,9 +1,11 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { Moon, Sun, UserRound,ArrowUpRight, Send  } from 'lucide-react';
 import { useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Header() {
     const links = [
@@ -11,12 +13,15 @@ function Header() {
         { title: 'Projects', url: '/projects' },
         { title: 'About', url: '/about' },
         { title: 'Contact', url: '/contact' },
-        // { title: 'Resume', url: '/resume' }
     ]
 
     // toggle menu
     const [open, setOpen] = useState(false);
     const toggleMenu = () => setOpen(!open);
+
+    useEffect(() => {
+      AOS.init();
+    }, []);
 
   return (
     <nav>
@@ -40,7 +45,7 @@ function Header() {
           </div>
         </div>
         {open && (
-          <div className='links'>
+          <div className='links' data-aos="fade-up">
             <ul>
               {links.map((link) => (
                 <li key={link.title}>

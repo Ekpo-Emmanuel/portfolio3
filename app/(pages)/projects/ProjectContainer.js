@@ -2,8 +2,13 @@ import {React, useEffect, useState} from 'react'
 import Link from 'next/link';
 import projectList from './projectList';
 import {ArrowUpRight} from 'lucide-react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const projectContainer = ({ projects, isHomepage = false}) => {
+    useEffect(() => {
+        AOS.init();
+      }, []);
   const tags = ['All', 'FrontEnd', 'BackEnd', 'Website', 'FullStack'];
   const [activeTag, setActiveTag] = useState(0);
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -37,7 +42,7 @@ const projectContainer = ({ projects, isHomepage = false}) => {
       </div>
       <div className='project-container' >
           {filteredProjects.map((project) => (
-              <div className='item' key={project.id}>
+              <div className='item' key={project.id} >
                   <div className='image'>
                       <img src={project.displa_img} alt={project.title}/>
                       <div className='redirects'>
