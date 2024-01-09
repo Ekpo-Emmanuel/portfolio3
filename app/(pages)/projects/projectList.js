@@ -12,7 +12,7 @@ const projectList = [
       }
     ],
     'technologies' : 'HTML, CSS, JavaScript, React, Next.Js',
-    'description' : 'lorem ipsum'
+    'description' : `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vivamus arcu felis bibendum ut tristique et egestas quis. Morbi tristique senectus et netus et malesuada fames ac. Rutrum tellus pellentesque eu tincidunt tortor. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Quam lacus suspendisse faucibus interdum. Proin gravida hendrerit lectus a. Mauris pharetra et ultrices neque ornare aenean euismod. In aliquam sem fringilla ut morbi. Diam phasellus vestibulum lorem sed risus ultricies. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Cursus turpis massa tincidunt dui ut ornare lectus sit. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tempus imperdiet nulla malesuada pellentesque elit. Eget duis at tellus at urna condimentum mattis pellentesque.`
   },
   {
     'id' : 1,

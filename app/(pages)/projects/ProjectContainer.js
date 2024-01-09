@@ -1,6 +1,5 @@
 import {React, useEffect, useState} from 'react'
 import Link from 'next/link';
-import projectList from './projectList';
 import {ArrowUpRight} from 'lucide-react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';

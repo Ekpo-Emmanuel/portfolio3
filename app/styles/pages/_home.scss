@@ -69,7 +69,8 @@
         .tags { display: none; }
         .project-container {
             display: grid; 
-            grid-template-columns: 1fr; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-column: span 2;
             gap: 70px 25px; 
             margin-top: 50px;
             @media (max-width: map-get($breakpoints, 'xl')) {
@@ -99,7 +100,7 @@
                 }
                 .image {
                     // width: 579px;
-                    height: 476px;
+                    height: 576px;
                     overflow: hidden;
                     position: relative;
                     @media (max-width: map-get($breakpoints, 'md')) {
@@ -196,9 +197,9 @@
                             font-size: $header-size;
                             letter-spacing: -1px;
                             font-weight: 500;
-                            @media (max-width: map-get($breakpoints, 'xl')) {
-                                font-size: 1.7em;
-                            }
+                            // @media (max-width: map-get($breakpoints, 'xl')) {
+                            //     font-size: 1.7em;
+                            // }
                             @media (max-width: map-get($breakpoints, 'sm')) {
                                 font-size: 1.5em;
                             }
@@ -212,7 +213,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 30px auto;
+        margin: 100px auto;
         span {
             display: inline;
             background-color: $yellow-color;
