@@ -12,8 +12,7 @@
             grid-template-columns: .2fr 1fr;
             gap: 50px;
             align-items: center;
-            border-bottom: 1px solid $black-color;
-            padding: 150px 0;
+            padding: 150px 0 100px 0;
             @media screen and (max-width: map-get($breakpoints, 'lg')) {
                 grid-template-columns: 1fr;
                 padding-bottom: 50px;
@@ -65,7 +64,7 @@
                 }
             }
         }
-        .sec2, .sec3, .sec4 {
+        .sec2, .sec3{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             padding: 150px 0;
@@ -101,6 +100,8 @@
             }
         }
         .sec3 {
+            outline: none;
+            border: none;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             @media (max-width: map-get($breakpoints, 'lg')) {
                 grid-template-columns: 1fr 1fr;
@@ -109,5 +110,68 @@
                 grid-template-columns: 1fr;
             }
         }
+        .sec2 {
+            outline: none;
+            border: none
+        }
     }
+    .tab-buttons {
+        display: flex;
+        gap: 50px;
+        @media screen and (max-width: map-get($breakpoints, 'sm')) {
+            gap: unset;
+            justify-content: space-between;
+        }
+    
+        border-bottom: 1px solid #ccc;
+        p {
+            padding: 10px 0px;
+            cursor: pointer;
+            background-color: inherit;
+            font-weight: 600;
+            letter-spacing: -1px;
+            &.active {
+                border-bottom: 2px solid red;
+            }
+        }
+    }
+    
+    .tab-content {
+        margin-top: 30px;
+        .container-icon {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            cursor: default;
+            @media (max-width: map-get($breakpoints, 'sm')) {
+                gap: 10px;
+            }
+            div {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                outline: 1px solid $white-color;
+                padding: 10px 20px;
+                border-radius: 5px;
+                @media (max-width: map-get($breakpoints, 'sm')) {
+                    gap: 10px;
+                    padding: 10px 10px;
+                }
+                span {
+                    // font-family: $third-font;
+                    letter-spacing: -1px;
+                    text-transform: capitalize;
+                    display: inline;
+                    @media (max-width: map-get($breakpoints, 'sm')) {
+                        font-size: 15px;
+                    }
+                }
+                img {
+                    height: 25px;
+                }
+            }
+        }
+    }
+  
 }

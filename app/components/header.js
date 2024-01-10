@@ -29,6 +29,7 @@ function Header() {
         <Link href="/">
           <div className='logo'>
             <img src='./assets/images/logo_dark.png' alt='logo' height={25} />
+            <img src='./assets/images/verified.png' alt='logo' height={16} />
           </div>
         </Link>
         <div className='menu-container'>

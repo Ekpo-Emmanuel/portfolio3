@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import React, {useState} from 'react'
 import Link from 'next/link'
 import { MailCheck, Instagram ,Github } from 'lucide-react';
 
@@ -12,6 +14,161 @@ const Linedln = () => {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="4.983" cy="5.009" r="2.188" fill="currentColor"/><path fill="currentColor" d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118c1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783c-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66zm-6.142 0H6.87v12.139H3.095z"/></svg>
   )
 }
+const Tabs = () => {
+  const [activeTab, setActiveTab] = useState(1);
+
+  const handleTabClick = (tabNumber) => {
+    setActiveTab(tabNumber);
+  };
+
+  return (
+    <div>
+      <div className="tab-buttons">
+        <p
+          onClick={() => handleTabClick(1)}
+          className={activeTab === 1 ? 'active' : ''}
+        >
+          Languages
+        </p>
+        <p
+          onClick={() => handleTabClick(2)}
+          className={activeTab === 2 ? 'active' : ''}
+        >
+          Web
+        </p>
+        <p
+          onClick={() => handleTabClick(3)}
+          className={activeTab === 3 ? 'active' : ''}
+        >
+          Design
+        </p>
+        <p
+          onClick={() => handleTabClick(4)}
+          className={activeTab === 4 ? 'active' : ''}
+        >
+          Others
+        </p>
+      </div>
+
+      <div className="tab-content">
+        {activeTab === 1 && 
+        <div className='languages container-icon'>
+          <div className='each'>
+            <img src='./assets/icons/typescript.png' alt='ddsa' />
+            <span>TypeScript</span>
+          </div>
+          <div className='each'>
+            <img src='./assets/icons/js.png' alt='Javascript' />
+            <span>JavaScript</span>
+          </div>
+          <div className='each'>
+            <img src='./assets/icons/java.png' alt='java' />
+            <span>java</span>
+          </div>
+          <div className='each'>
+            <img src='./assets/icons/python.png' alt='python' />
+            <span>python</span>
+          </div>
+          <div className='each'>
+            <img src='./assets/icons/php.png' alt='php' />
+            <span>PHP</span>
+          </div>
+          <div className='each'>
+            <img src='./assets/icons/sql.png' alt='sql' />
+            <span>SQL</span>
+          </div>
+          <div className='each'>
+              <img src='./assets/icons/html.png' alt='html' />
+              <span>HTML</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/css.png' alt='CSS' />
+              <span>CSS</span>
+            </div>
+        </div>
+        }
+        {activeTab === 2 && <div className='web container-icon'>
+            <div className='each'>
+              <img src='./assets/icons/reactjs.png' alt='React JS' />
+              <span>React JS</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/nextjs.png' alt='nextjs' />
+              <span>Next JS</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/node-js.png' alt='Node JS' />
+              <span>Node JS</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/express.png' alt='express' />
+              <span>express</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/firebase.png' alt='firebase' />
+              <span>firebase</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/mongodb.png' alt='mongodb' />
+              <span>mongoDB</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/sass.png' alt='sass' />
+              <span>SASS</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/tailwind.png' alt='tailwind' />
+              <span>tailwind</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/gcp.png' alt='gcp' />
+              <span>GCP</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/postgres.png' alt='postgres' />
+              <span>postgres</span>
+            </div>
+        </div>}
+        {activeTab === 3 && <div className='design container-icon'>
+            <div className='each'>
+              <img src='./assets/icons/photoshop.png' alt='photoshop' />
+              <span>photoshop</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/figma.png' alt='figma' />
+              <span>figma</span>
+            </div>
+        </div>}
+        {activeTab === 4 && <div className='ohers container-icon'>
+          <div className='each'>
+              <img src='./assets/icons/docker.png' alt='docker' />
+              <span>docker</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/github.png' alt='github' />
+              <span>github</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/jenkins.png' alt='jenkins' />
+              <span>jenkins</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/kubernetes.png' alt='kubernetes' />
+              <span>kubernetes</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/wordpress.png' alt='wordpress' />
+              <span>wordpress</span>
+            </div>
+            <div className='each'>
+              <img src='./assets/icons/joomla.png' alt='joomla' />
+              <span>joomla</span>
+            </div>
+        </div>}
+      </div>
+    </div>
+  );
+};
 const About = () => {
   const Links = [
     {
@@ -34,7 +191,7 @@ const About = () => {
       'url': '/',
       'icon': <Github  />
     }, 
-  ]
+  ];
   return (
     <section className='aboutMe'>
       <div className='container'>
@@ -50,6 +207,11 @@ const About = () => {
                 <Link href={link.url} key={index} target='_blank' className='link'>{link.icon}</Link>
               ))}
             </div>
+          </div>
+        </div>
+        <div className='sec4'>
+          <div className='stack'>
+          <Tabs />
           </div>
         </div>
         <div className='sec2'>
@@ -69,29 +231,6 @@ const About = () => {
             <span>Cross-Functional Team Building</span>
           </div>
         </div>
-        <div className='sec3'>
-        <span className='title'>Tech Stack</span>
-          <div className='set1'>
-            <span>HTML, CSS</span>
-            <span>Typescript React.JS Next.JS</span>
-            <span>Express.js - Node.js</span>
-            <span>Laravel - PHP </span>
-            <span>Java - TestNG, Spring Boot, Python</span>
-            <span>Game Design and Development</span>
-          </div>
-          <div className='set1'>
-            <span>MySQL, PostgreSQL</span>
-            <span>MongoDB, Redis</span>
-            <span>Docker, Kubernetes</span>
-            <span>Jenkins</span>
-          </div>
-          <div className='set1'>
-            {/* <span>AWS</span> */}
-            <span>Google Cloud Platform</span>
-            <span>Wordpress, Joomla</span>
-          </div>
-        </div>
-        <div className='sec5'></div>
       </div>
     </section>
   )

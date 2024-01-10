@@ -29,7 +29,8 @@ $base-font-size: 14px;
     padding: 20px 4vw;
     margin: auto;
     @media screen and (max-width: map-get($breakpoints, 'sm')) {
-        padding: 20px 12px;
+        // padding: 20px 12px;
+        padding: 20px 20px;
     }
 }
 

@@ -20,6 +20,11 @@ nav
         position: relative;
         @include maxWidth;
         @include padding;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
         .menu-container {
             display: flex;
             align-items: center;
