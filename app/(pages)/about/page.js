@@ -58,7 +58,7 @@ const Tabs = () => {
             <span>TypeScript</span>
           </div>
           <div className='each'>
-            <img src='./assets/icons/js.png' alt='Javascript' />
+            <img src='./assets/icons/javascript.png' alt='Javascript' />
             <span>JavaScript</span>
           </div>
           <div className='each'>

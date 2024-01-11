@@ -49,7 +49,7 @@ const projectContainer = ({ projects, isHomepage = false}) => {
                           <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
                       </div>
                   </div>
-                  <Link href={`Single-Project?id=${project.id}`}>
+                  <Link href={project.links}>
                       <div className='details'>
                           <div className='stack'>
                               <ul>

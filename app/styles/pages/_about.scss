@@ -3,6 +3,7 @@
     // padding-top: 140px;
     .container {
         @include maxWidth;
+        max-width: 1300px;
         @include padding;
         display: grid;
         grid-template-columns: 1fr;

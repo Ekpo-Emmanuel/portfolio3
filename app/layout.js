@@ -14,12 +14,12 @@ export const metadata = {
   // manifest: '/site.webmanifest',
   // themeColor: '#ffffff',
   // colorScheme: 'dark light',
-  openGraph: {
-    title: 'Emmanuel Ekpo',
-    description: 'A software developer who loves to code :)',
-    url: 'https://emmanuel-ekpo.vercel.app',
-    siteName: 'Emmanuel Ekpo',
-  }
+  // openGraph: {
+  //   title: 'Emmanuel Ekpo',
+  //   description: 'A software developer who loves to code :)',
+  //   url: 'https://emmanuel-ekpo.vercel.app',
+  //   siteName: 'Emmanuel Ekpo',
+  // }
 }
 
 export default function RootLayout({ children }) {
