@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react';
 
 function Footer() {
+  const logo = '../assets/images/logo_dark.png';
   return (
     <footer>
       <div className='container'>
         <span className='title'>
-          <img src="./assets/images/logo_dark.png" alt="logo" height={25}/>
+          <img src={logo} alt="logo" height={25}/>
         </span>
         <div className='links'>
           <div className='link'>

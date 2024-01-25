@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Serif+Display:wght@400;500;600;700&display=swap&family=Open+Sans:wght@400;500;600;700;800&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 
 
 $primary-font: 'Montserrat', sans-serif;
 $secondary-font: 'Noto Serif Display', serif;
 $third-font: 'Open Sans', sans-serif;;
+$fourth-font: 'Unbounded', sans-serif;
+
+
 $black-color: rgb(29, 29, 29);
-$white-color: #F0F1FA;
+$white-color: ghostwhite;
 $grey-color: #9C9C9C;
 $blue-color: #3A47F4;
 $yellow-color: rgb(255, 204, 0);
@@ -14,7 +17,8 @@ $yellow-color: rgb(255, 204, 0);
 
 
 
-$max-width: 1800px;
+
+$max-width: 1500px;
 $title-size: 11em;
 $tiny-size: 12px;
 $header-size: 2.1em;
@@ -24,11 +28,11 @@ $base-font-size: 14px;
     max-width: $max-width;
     margin: auto;
 }
-@mixin padding {
-    padding: 20px 4vw;
+@mixin padding($top: 20px, $bottom: 4vw) {
+    padding: $top $bottom;
     margin: auto;
     @media screen and (max-width: map-get($breakpoints, 'sm')) {
-        padding: 20px 12px;
+        padding: $top 12px;
     }
 }
 

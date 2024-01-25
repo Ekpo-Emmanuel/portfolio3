@@ -15,6 +15,7 @@ function Header() {
         { title: 'Contact', url: '/contact' },
     ]
 
+    const logo = '../assets/images/logo_dark.png';
     // toggle menu
     const [open, setOpen] = useState(false);
     const toggleMenu = () => setOpen(!open);
@@ -28,7 +29,7 @@ function Header() {
       <div className={open ? 'container min' : 'container'}>
         <Link href="/">
           <div className='logo'>
-            <img src='./assets/images/logo_dark.png' alt='logo' height={25} />
+            <img src={logo} alt='logo' height={25} />
           </div>
         </Link>
         <div className='menu-container'>

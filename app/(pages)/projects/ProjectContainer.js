@@ -1,30 +1,41 @@
+
 import {React, useEffect, useState} from 'react'
 import Link from 'next/link';
 import projectList from './projectList';
-import {ArrowUpRight} from 'lucide-react'
+import {ArrowUpRight, Github} from 'lucide-react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const projectContainer = ({ projects, isHomepage = false}) => {
+const projectContainer = ({ projects}) => {
     useEffect(() => {
         AOS.init();
-      }, []);
-  const tags = ['All', 'FrontEnd', 'BackEnd', 'Website', 'FullStack'];
-  const [activeTag, setActiveTag] = useState(0);
-  const [filteredProjects, setFilteredProjects] = useState(projects);
+    }, []);
+    const tags = ['All', 'FrontEnd', 'BackEnd', 'Website', 'FullStack'];
+    const [activeTag, setActiveTag] = useState(0);
+    const [filteredProjects, setFilteredProjects] = useState(projects);
 
-  useEffect(() => {
+    useEffect(() => {
     if (activeTag === 0) {
-      setFilteredProjects(projects); 
+        setFilteredProjects(projects); 
     } else {
-      const filtered = projects.filter((project) => project.tags && project.tags.includes(tags[activeTag]));
-      setFilteredProjects(filtered);
+        const filtered = projects.filter((project) => project.tags && project.tags.includes(tags[activeTag]));
+        setFilteredProjects(filtered);
     }
-  }, [activeTag]);
+    }, [activeTag]);
 
-  const handleTag = (index) => {
+    const handleTag = (index) => {
     setActiveTag(index === activeTag ? null : index);
-  };
+    };
+
+    const description = (project) => {
+        const description = project.short_description;
+        description.trim();
+
+        const positionOfFullStop = description.indexOf('.');
+        // const positionOfFullStop = description.indexOf('.', description.indexOf('.') + 1);
+
+        return description.substring(0, positionOfFullStop) + ".";
+    }
   return (
     <>
     <div className='section2'>
@@ -42,30 +53,43 @@ const projectContainer = ({ projects, isHomepage = false}) => {
       </div>
       <div className='project-container' >
           {filteredProjects.map((project) => (
-              <div className='item' key={project.id} >
-                  <div className='image'>
-                      <img src={project.displa_img} alt={project.title}/>
-                      <div className='redirects'>
-                          <Link href={project.redirects[0].github} target="_blank"><span>Source code</span></Link>
-                          <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
-                      </div>
-                  </div>
-                  <Link href={`Single-Project?id=${project.id}`}>
-                      <div className='details'>
-                          <div className='stack'>
-                              <ul>
-                                  {project.technologies.split(', ').map((technology, index) => (
-                                  <li key={index}>{technology}</li>
-                                  ))}
+            <div className='item' key={project.id} >
+                 <div className='selectWork-title'>
+                    <h2 className="h2" id="work">Featured Works</h2>
+                </div>
+                <div className='image'>
+                    <img src={project.displa_img} alt={project.title}/>
+                    <div className='redirects'>
+                        <Link href={project.redirects[0].github} target="_blank"><span>Source code</span></Link>
+                        <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
+                    </div>
+                </div>
+                {/* <Link href={`Single-Project?id=${project.id}`}> */}
+                    <div className='details'>
+                        <div className='stack'>
+                            <ul>
+                                {project.technologies.split(', ').map((technology, index) => (
+                                <li key={index}>{technology}</li>
+                                ))}
 
-                              </ul>
-                          </div>  
-                          <div className='title'>
-                              <p> {project.title} </p>
-                          </div>
-                      </div>
-                  </Link>
-              </div>
+                            </ul>
+                        </div>  
+                        <div className='title'>
+                            <p> {project.title} </p>
+                        </div>
+                        <div className='desc'>
+                            <p> {(description(project))} </p>
+                        </div>
+                        <div className='link'>
+                            <Link href={`/project/${project.id}`}>
+                                <p>Open Project</p>
+                            </Link>
+                            <Link href={project.redirects[0].github} target="_blank"><Github /></Link>
+                            <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
+                        </div>
+                    </div>
+                {/* </Link> */}
+            </div>
           ))}
       </div>
   </div>
