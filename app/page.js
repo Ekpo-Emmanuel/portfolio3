@@ -17,7 +17,7 @@ const Hero = () => {
     <section className='hero'>
       <div className='container' data-aos="fade-up">
         <span className='title' >Hello, I'm Emmanuel ッ</span>
-        <p >I am a <span>User Experience Designer</span> <span>Developer</span> <span>Entrepreneur</span>  who enjoys seamlessly bridging the gap between people and digital space by day, and a lofi loving doodler by night.</p>
+        <p >I am a <span>Software Developer</span> <span>User Experience Designer</span> <span>Entrepreneur</span>  who enjoys seamlessly bridging the gap between people and digital space by day, and a lofi loving doodler by night.</p>
         <div className='about'>
             <Link href="/about"><span>More About me</span></Link>
             <ArrowRight />
@@ -35,7 +35,7 @@ export default function Page() {
       <div className='divider'>
         <ProjectContainer isHomepage={true} projects={trimmedProjectList}/>
         <div className='see-more'>
-          <Link href={"/projects"}><span>See all projects</span></Link>
+          <Link href={"/projects"}><span>See More</span></Link>
         </div>
       </div>
      </>
