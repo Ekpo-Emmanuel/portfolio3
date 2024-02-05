@@ -1,7 +1,6 @@
 
 import {React, useEffect, useState} from 'react'
 import Link from 'next/link';
-import projectList from './projectList';
 import {ArrowUpRight, Github} from 'lucide-react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -58,7 +57,9 @@ const projectContainer = ({ projects}) => {
                     <h2 className="h2" id="work">Featured Works</h2>
                 </div>
                 <div className='image'>
-                    <img src={project.displa_img} alt={project.title}/>
+                    <Link href={`/project/${project.id}`}> 
+                        <img src={`/assets/images/projects/${project.displa_img}`} alt={project.title}/>
+                    </Link>
                     <div className='redirects'>
                         <Link href={project.redirects[0].github} target="_blank"><span>Source code</span></Link>
                         <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
@@ -74,9 +75,12 @@ const projectContainer = ({ projects}) => {
 
                             </ul>
                         </div>  
-                        <div className='title'>
-                            <p> {project.title} </p>
-                        </div>
+                        <Link href={`/project/${project.id}`}> 
+                            <div className='title'>
+                                <p> {project.title} </p>
+                                <span>{project.headline}</span>
+                            </div>
+                        </Link>
                         <div className='desc'>
                             <p> {(description(project))} </p>
                         </div>
@@ -84,8 +88,16 @@ const projectContainer = ({ projects}) => {
                             <Link href={`/project/${project.id}`}>
                                 <p>Open Project</p>
                             </Link>
-                            <Link href={project.redirects[0].github} target="_blank"><Github /></Link>
-                            <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
+                            {project.redirects[0].website === '/' ? 
+                            <>
+                                <Link href={project.redirects[0].github} target="_blank"><Github /></Link>
+                            </>
+                            : 
+                            <>
+                                <Link href={project.redirects[0].github} target="_blank"><Github /></Link>
+                                <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
+                            </>                            
+                            }
                         </div>
                     </div>
                 {/* </Link> */}

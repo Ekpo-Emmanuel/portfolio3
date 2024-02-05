@@ -143,19 +143,19 @@ nav
                 display: none;
             }
             ul:nth-child(2) {
+                background-color: $black-color;
                 li {
                     margin: 15px 0;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     span {
-                        svg {
-                            stroke-width: 1.2;
-                        }
+                        color: $white-color;
                     }
                     svg:nth-child(2) {
-                        stroke-width: 1.2;
+                        stroke-width: 2;
                         // transform: scale(1.4);
+                        stroke: $white-color;
                     }
                 }
             }
@@ -175,7 +175,7 @@ nav
                         font-weight: 600;
                         svg {
                             stroke: #fff;
-                            stroke-width: 1.2;
+                            stroke-width: 2;
                         }
                     }
                     svg:nth-child(2) {

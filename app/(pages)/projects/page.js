@@ -14,9 +14,9 @@ const Project = () => {
     <>
     <section className="project">
         <div className='container'>
-            <div className='section1'>  
+            {/* <div className='section1'>  
                 <p className='title-fade'>Portfolio<span>({numberOfProjects})</span></p>
-            </div>
+            </div> */}
             <ProjectContainer projects={projectList}/>
         </div>
     </section>

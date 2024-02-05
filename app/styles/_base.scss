@@ -5,6 +5,8 @@ $secondary-font: 'Noto Serif Display', serif;
 $third-font: 'Open Sans', sans-serif;;
 $fourth-font: 'Unbounded', sans-serif;
 $fifth-font: 'Figtree', sans-serif;
+$six-font:  'Mabry pro, sans-serif';
+
 
 
 $black-color: rgb(29, 29, 29);
@@ -13,6 +15,12 @@ $grey-color: #9C9C9C;
 $blue-color: #3A47F4;
 $yellow-color: rgb(255, 204, 0);
 
+
+// $black-color : #E3E3E3;
+// $white-color : #000000;
+// $grey-color : #636363;
+// $blue-color : #C5B80E;
+// $yellow-color: #0000FB;
 
 
 
@@ -46,3 +54,45 @@ $breakpoints: (
     'xl': 1200px,
     'xxl': 2000px
 );
+
+
+@font-face {
+    font-family: Mabry pro;
+    src: url(../../public/assets/fonts/mabry-regular-pro.woff2) format("woff2"),
+      url(../../public/assets/fonts/mabry-regular-pro.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Mabry pro;
+    src: url(../../public/assets/fonts/mabry-italic-pro.woff2) format("woff2"),
+      url(../../public/assets/fonts/mabry-italic-pro.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Mabry pro;
+    src: url(../../public/assets/fonts/mabry-medium-pro.woff2) format("woff2"),
+      url(../../public/assets/fonts/mabry-medium-pro.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Mabry pro;
+    src: url(../../public/assets/fonts/mabry-medium-italic-pro.woff2) format("woff2"),
+      url(../../public/assets/fonts/mabry-medium-italic-pro.woff) format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Mabry pro;
+    src: url(../../public/assets/fonts/mabry-bold-pro.woff2) format("woff2"),
+      url(../../public/assets/fonts/mabry-bold-pro.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }

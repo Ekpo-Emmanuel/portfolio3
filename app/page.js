@@ -7,6 +7,10 @@ import ProjectContainer from './(pages)/projects/ProjectContainer';
 import projectList from './(pages)/projects/projectList';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ProjectList from './(pages)/about/components/ProjectList';
+import Tabs from './(pages)/about/components/Tabs';
+import OtherStuff from './(pages)/about/components/OtherStuff';
+import Contact from './(pages)/contact/page';
 
 
 const Hero = () => {
@@ -17,7 +21,7 @@ const Hero = () => {
     <section className='hero'>
       <div className='container' data-aos="fade-up">
         <span className='title' >Hello, I'm Emmanuel ッ</span>
-        <p >I am a <span>Software Developer</span> <span>User Experience Designer</span> <span>Entrepreneur</span>  who enjoys seamlessly bridging the gap between people and digital space by day, and a lofi loving doodler by night.</p>
+        <p >I am a <span>Software Engineer</span><span>Designer</span>  who enjoys seamlessly bridging the gap between people and digital space by day, and a lofi loving doodler by night.</p>
         <div className='about'>
             <Link href="/about"><span>More About me</span></Link>
             <ArrowRight />
@@ -28,15 +32,21 @@ const Hero = () => {
 }
 
 export default function Page() {
-  const trimmedProjectList = projectList.slice(0, 3);
+  const featured = projectList.filter(project => project.featured === 'yes');
   return (
     <>
       <Hero />
-      <div className='divider'>
-        <ProjectContainer isHomepage={true} projects={trimmedProjectList}/>
-        <div className='see-more'>
-          <Link href={"/projects"}><span>See More</span></Link>
-        </div>
+        {/* <ProjectList isHomepage={true}/> */}
+        <div className='divider'>
+          <ProjectContainer 
+            isHomepage={true} 
+            projects={featured}
+          />
+          <div className='see-more'>
+            <Link href={"/projects"}><span>See More</span></Link>
+          </div>
+        {/* <Tabs /> */}
+        {/* <OtherStuff /> */}
       </div>
      </>
   )

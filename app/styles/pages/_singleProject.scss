@@ -10,37 +10,87 @@
         flex-direction: column;
         gap: 50px;
         margin-top: 70px;
-        
+        @media (max-width: map-get($breakpoints, 'sm')) {
+            gap: 30px;
+        }
         .title {
-            p {
-                font-weight: 600;
-                font-family: $fourth-font;
-                font-size: $header-size;
-                @media (max-width: map-get($breakpoints, 'sm')) {
-                    font-size: 1.7em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            .sec1 {
+                display: grid;
+                gap: 10px;
+                p {
+                    font-weight: 600;
+                    font-family: $fourth-font;
+                    font-size: $header-size;
+                    @media (max-width: map-get($breakpoints, 'sm')) {
+                        font-size: 1.5em;
+                    }
+                }
+                span {
+                    font-size: 17px;
+                    font-family: $fifth-font;
+                    font-weight: 600;
+                }
+            }
+            .line {
+                .live {
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-decoration: underline;
+                    background-color: $blue-color;
+                    color: $white-color;
+                    padding: 10px 15px;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    @media (max-width: map-get($breakpoints, 'sm')) {
+                        font-size: 15px;
+                        padding: 10px 6px;
+                        background-color: inherit;
+                        color: $black-color;
+                        gap: 5px;
+                    }
+                    svg {
+                        display: flex;
+                        stroke: $white-color;
+                        @media (max-width: map-get($breakpoints, 'sm')) {
+                            height: 20px;
+                            stroke: $black-color;
+                        }
+                    }
+                    &:hover {
+                        background-color: $black-color;
+                        @media (max-width: map-get($breakpoints, 'sm')) {
+                           background-color: unset;
+                        }
+                    }
+                }
+                svg {
+                    display: flex;
+                    @media (max-width: map-get($breakpoints, 'sm')) {
+                        height: 20px;
+                    }
                 }
             }
         }
         .image {
             height: 550px;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            @media (max-width: map-get($breakpoints, 'md')) {
-                height: 400px;
+            @media (max-width: map-get($breakpoints, 'lg')) {
+                height: fit-content;
             }
-            @media (max-width: map-get($breakpoints, 'sm')) {
-                 height: 250px;
-             }
             img {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                height: auto;
+                object-fit: contain;
             }
         }
         .details {
             @include padding(70px, 50px);
-            outline: 1px solid $black-color;
             display: grid;
             grid-template-columns: 1fr .4fr;
             gap: 150px;
@@ -95,6 +145,9 @@
                             font-size: 16px;
                         }
                     }
+                    span {
+                        font-weight: 400;
+                    }
                 }
             }
             .link {
@@ -125,6 +178,9 @@
                             height: 20px;
                         }
                     }
+                    &:hover {
+                        background-color: $black-color;
+                    }
                 }
                 svg {
                     display: flex;
@@ -136,8 +192,8 @@
         }
         .process {
             @include padding(70px, 50px);
-            outline: 1px solid $black-color;
             display: grid;
+            margin: unset;
             gap: 20px;
             background-color: $white-color;
             @media (max-width: map-get($breakpoints, 'lg')) {
@@ -160,19 +216,36 @@
                 font-family: $fifth-font;
                 font-size: 17.6px;
                 display: block;
-                width: 80%;
                 line-height: 25px;
                 @media (max-width: map-get($breakpoints, 'md')) {
                     width: unset;
                     font-size: 16px;
                 }
             }
-        }
 
+            div {
+                display: grid;
+                gap: 30px;
+
+                ul {
+                    display: grid;
+                    gap: 30px;
+                    li {
+                        display: grid;
+                        gap: 5px;
+                        font-weight: 800;
+                        span {
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
         .accomplishments {
             @include padding(70px, 50px);
             margin: unset;
-            outline: 1px solid $black-color;
+            // outline: 1px solid $black-color;
             display: grid;
             gap: 20px;
             background-color: $white-color;
@@ -203,45 +276,55 @@
                 }
             }
         }
-        
-        .images {
+        .all_images_container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
-            @media (max-width: map-get($breakpoints, 'lg')) {
-                grid-template-columns: 1fr 1fr;
+            p {
+                font-size: 25px;
+                font-weight: 600;
+                font-family: $fourth-font;
+                @media (max-width: map-get($breakpoints, 'md')) {
+                    font-size: 20px;
+                }
             }
-            @media (max-width: map-get($breakpoints, 'md')) {
-                grid-template-columns: 1fr;
-            }
-            .image {
-                height: 300px;
-               overflow: hidden;
-               position: relative;
-               @media (max-width: map-get($breakpoints, 'md')) {
-                   height: 400px;
-               }
-               @media (max-width: map-get($breakpoints, 'sm')) {
-                   height: auto;
-               }
-               img {
-                   width: 100%;
-                   height: 100%;
-                   object-fit: cover;
-                   transition: 2s ease-in-out;
-               }
+            .images {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                padding: 20px;
+                gap: 20px;
+                background-color: $black-color;
+                @media (max-width: map-get($breakpoints, 'lg')) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media (max-width: map-get($breakpoints, 'md')) {
+                    grid-template-columns: 1fr ;
+                    padding: 10px;
+                    gap: 10px;
+                }
+                .image {
+                    // height: 250px;
+                    height: fit-content;
+                   overflow: hidden;
+                   position: relative;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   outline: 1px solid $white-color;
+                   img {
+                       width: 100%;
+                       height: 100%;
+                       object-fit: contain;
+                       transition: 2s ease-in-out;
+                   }
+                }
             }
         }
         .seeMore {
             @include padding(70px, 50px);
             margin: unset;
-            // outline: 1px solid $black-color;
-            // display: grid;
-            // gap: 20px;
             display: flex;
             justify-content: space-between;
             border-radius: 15px;
-            // background-color: $blue-color;
             background-color: $white-color;
             @media (max-width: map-get($breakpoints, 'lg')) {
                 @include padding(50px, 50px);  
@@ -255,22 +338,28 @@
             p {
                 font-size: 25px;
                 font-weight: 600;
-                // color: $white-color;
                 font-family: $fourth-font;
                 @media (max-width: map-get($breakpoints, 'md')) {
                     font-size: 20px;
+                }
+                @media (max-width: map-get($breakpoints, 'sm')) {
+                    font-size: 17px;
                 }
             }
             span {
                 font-family: $fifth-font;
                 font-size: 17.6px;
-                display: block;
+                display: inline;
+                font-size: 13px;
                 width: 80%;
                 line-height: 25px;
-                // color: $white-color;
                 @media (max-width: map-get($breakpoints, 'md')) {
                     width: unset;
-                    font-size: 16px;
+                }
+            }
+            .archieve {
+                @media (max-width: map-get($breakpoints, 'sm')) {
+                    display: none;
                 }
             }
         }

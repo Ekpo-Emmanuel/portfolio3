@@ -1,6 +1,6 @@
 
 .project {
-    padding-top: 100px;      
+    padding: 50px 0;      
     .container {  
         display: flex;
         flex-direction: column;
@@ -82,9 +82,6 @@
                  &:hover {
                     .image {
                         overflow: hidden;
-                        img {
-                            transform: scale(1.2,1.2);
-                        }
                     }
                 }
                 .selectWork-title {
@@ -95,12 +92,13 @@
                     height: 400px;
                     overflow: hidden;
                     position: relative;
+                    outline: 1px solid rgba(128, 128, 128, 0.167);
+                    // border-radius: 10px;
                     @media (max-width: map-get($breakpoints, 'md')) {
                         height: 400px;
                     }
                     @media (max-width: map-get($breakpoints, 'sm')) {
-                        height: 350px;
-                        border-radius: 10px;
+                        height: unset;
                     }
                     img {
                         width: 100%;
@@ -118,6 +116,7 @@
                         display: flex;
                         align-items: center;
                         gap: 10px;
+                        display: none;
                         // opacity: 0;
                         @media (max-width: map-get($breakpoints, 'sm')) {
                            transform: scale(0.8);
@@ -153,7 +152,7 @@
                      gap: 3px;
      
                      .stack {
-                         margin-top: 20px;
+                         display: none;
                          @media (max-width: map-get($breakpoints, 'sm')) {
                              margin-top: 15px;
                          }
@@ -184,14 +183,24 @@
                          }
                      }
                      .title {
+                        display: grid;
+                        gap: 5px;
+                        margin-top: 20px;
                          p {
                              font-size: $header-size;
                              letter-spacing: -1px;
                              font-weight: 500;
+                            font-family: $fourth-font;
      
                              @media (max-width: map-get($breakpoints, 'sm')) {
-                                 font-size: 1.7em;
+                                 font-size: 1.5em;
                              }
+                         }
+                         span {
+                            font-family: 17px;
+                            @media (max-width: map-get($breakpoints, 'sm')) {
+                                font-size: 15px;
+                            }
                          }
                      }
                  }
