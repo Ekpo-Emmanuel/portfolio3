@@ -127,7 +127,7 @@ const projectList = [
     'featured' : 'no',
     'title' : 'Fithub',
     'headline' : 'Fitness Website for Fitness Enthusiasts',
-    'displa_img' : 'melody-fusion/01.jpg',
+    'displa_img' : 'fithub-WebApp/011.png',
     'images' : [
       'fithub-WebApp/011.png', 
       'fithub-WebApp/02.png', 
