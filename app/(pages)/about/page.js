@@ -53,9 +53,9 @@ const About = () => {
         <div className='sec1'>
           <MyImage />
           <div className='details'>
-            <p className='title'>Emmanuel Ekpo is a purpose-driven developer who brings people and teams together.</p>
+            <p className='title'>Emmanuel is a purpose-driven Engineer and Desinger  Excited to Innovate and Collaborate!</p>
             <p className='desc'>
-              <span>I'm passionate about design's power to unite people and improve lives. <br /> I'm skilled at solving complex problems through thoughtful design, integrating everyone's insights to find shared solutions, from strategy to refining user experiences. <br /> I've worked on diverse projects, including social media, technology, virtual venue design, R&D, exhibitions, interior, and architecture. I find inspiration in listening to people and sharing their passions.</span>
+              <span>I'm all about creating and designing that brings folks together and makes life better!<br />  I've got a knack for cracking tricky problems with smart design, blending everyone's ideas for kickass solutions—from big-picture strategy to fine-tuning user experiences. <br /> I've dipped my toes in various projects, from social media and tech to virtual venues, R&D, exhibitions, interiors, and even some cool architecture stuff.</span>
               <span>Currently, I’m pursuing a degree in Computer Science at Alexander College, and <strong> I’m actively looking for 2025 full-time position.</strong></span></p>
             <div className='stack'>
               {Links.map((link, index) => (

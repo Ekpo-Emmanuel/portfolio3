@@ -11,7 +11,7 @@ export default function OldPorfolio() {
                 <img src="/assets/images/old Portfolios/portfolio1.png" alt="portfolio1" />
             </div>
             <div>
-                <Link href="/" target="_blank"><span>Visit <ArrowUpRight /></span></Link>
+                <Link href="https://porfolio-prev44.000webhostapp.com/Ea%20Dev/" target="_blank"><span>Visit <ArrowUpRight /></span></Link>
                 {/* <p>Date</p> */}
             </div>
         </div>
@@ -20,7 +20,7 @@ export default function OldPorfolio() {
                 <img src="/assets/images/old Portfolios/portfolio2.png" alt="portfolio2" />
             </div>
             <div>
-                <Link href="/" target="_blank"><span>Visit <ArrowUpRight /></span></Link>
+                <Link href="https://emmanuelea.netlify.app/" target="_blank"><span>Visit <ArrowUpRight /></span></Link>
                 {/* <p>Date</p> */}
             </div>
         </div>

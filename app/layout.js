@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <head>
       <link
         rel="icon"
-        href="/assets/images/ea_logo.svg"
+        href="/assets/images/logo_dark.png"
         type="image/png"
       />
       <Meta />
