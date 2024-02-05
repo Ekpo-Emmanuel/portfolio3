@@ -68,7 +68,7 @@ function Header() {
             <ul>
                 <li>
                   <span>
-                    <Link href="/" target={"_blank"}><span>Archieve</span></Link>
+                    <Link href="/archieve" target={"_blank"}><span>Archieve</span></Link>
                   </span>
                   <FolderArchive />
                 </li>

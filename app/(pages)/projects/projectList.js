@@ -93,7 +93,7 @@ const projectList = [
     'platform' : 'Web',
     'timeline' : 'Dec 2023 - Present',
     'role' : 'Developer, Designer',
-    'redirects' : [ { 'website': '/', 'github': '/' } ],
+    'redirects' : [ { 'website': '/', 'github': 'https://github.com/Ekpo-Emmanuel/exam-sphere' } ],
     'technologies' : 'Tailwind CSS,ReactJS, NodeJS, ExpressJS, RestAPI, Firebase, Superbase',
     'description' : 'lorem ipsum',
     'short_description': 'Exam Space is a web-based platform designed to simplify the process of exam scheduling for students. It addresses the challenges associated with traditional PDF-based schedules released by schools. The project is built using ReactJS for the frontend, NodeJS-Express for the backend and Superbase for database Management.',

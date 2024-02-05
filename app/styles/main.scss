@@ -11,6 +11,7 @@
 @import './pages/_singleProject.scss';
 @import './pages/singleProject.scss';
 @import './pages/_contact.scss';
+@import './pages/_archieve.scss';
 
 
 
@@ -23,9 +24,9 @@
     color: $black-color;
 }
 
-// body {
-//     background-color: $white-color;
-// }
+body {
+    background-color: $white-color;
+}
 ::selection {
     background-color: $yellow-color;
     color: $black-color;

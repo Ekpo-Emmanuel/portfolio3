@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Lock } from 'lucide-react';
+import { ArrowUpRight, Lock } from 'lucide-react';
 import allDetails from '@/app/includes/allDetails';
 
 export default function Contact() {
@@ -9,6 +9,43 @@ export default function Contact() {
     const blog = allDetails[0].blog;
     const resume = allDetails[0].resume;
     
+    const links = [
+        {
+            'title': 'Linkedln',
+            'url': linkedln,
+            'active': 'yes'
+        },
+        {
+            'title': 'Github',
+            'url': github,
+            'active': 'yes'
+        },
+        {
+            'title': 'Resume',
+            'url': resume,
+            'active': 'yes'
+        },
+        {
+            'title': 'Blog',
+            'url': blog,
+            'active': 'yes'
+        },
+        {
+            'title': 'Youtube',
+            'url': blog,
+            'active': 'no'
+        },
+        {
+            'title': 'Tiktok',
+            'url': blog,
+            'active': 'no'
+        },
+        {
+            'title': 'Instagram',
+            'url': blog,
+            'active': 'no'
+        },
+    ]
 
     return (
     <section className='contact'>
@@ -21,14 +58,17 @@ export default function Contact() {
                 </Link>
             </div>
             <div className='sec2'>
-                <p className='title'>Socials</p>
                 <ul>
-                    <Link href={linkedln} target="_blank"><span>Linkedln</span></Link>
-                    <Link href={`/`} target="_blank"><span>Youtube</span></Link>
-                    <Link href={github} target="_blank"><span>Github</span></Link>
-                    <Link href={`/`} target="_blank"><span>Tiktok</span></Link>
-                    <Link href={blog} target="_blank"><span>My Blog</span></Link>
-                    <Link href={`/`} target="_blank"><span>Tiktok</span></Link>
+                    {links.map((link) => (
+                      link.active === 'yes' ? (
+                        <Link 
+                            href={link.url} 
+                            key={link.title} target="_blank"
+                        >
+                                <span>{link.title} <ArrowUpRight /></span>
+                        </Link>
+                      ) : null
+                    ))}
                 </ul>
             </div>
         </div>
