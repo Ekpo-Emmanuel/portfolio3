@@ -21,7 +21,7 @@ const Hero = () => {
     <section className='hero'>
       <div className='container' data-aos="fade-up">
         <span className='title' >Hello, I'm Emmanuel ッ</span>
-        <p >I am a <span>Software Engineer</span><span>Designer</span>  who enjoys seamlessly bridging the gap between people and digital space by day, and a lofi loving doodler by night.</p>
+        <p >I am a <span>Software Engineer</span><span>Designer</span>  who enjoys Creating and Building Innovative Solutions and Seamless User Journeys"</p>
         <div className='about'>
             <Link href="/about"><span>More About me</span></Link>
             <ArrowRight />
