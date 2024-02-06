@@ -39,7 +39,7 @@ const projectContainer = ({ projects}) => {
     <>
     <div className='section2'>
       <div className='tags'>
-          <p className='title'>Tags:</p>
+          {/* <p className='title'>Tags:</p>
           <ul>
           {tags.map((tag, index) => (
               <li
@@ -48,7 +48,7 @@ const projectContainer = ({ projects}) => {
                   className={index === activeTag ? 'active' : ''}
               >{tag}</li>
           ))}
-          </ul>
+          </ul> */}
       </div>
       <div className='project-container' >
           {filteredProjects.map((project) => (
