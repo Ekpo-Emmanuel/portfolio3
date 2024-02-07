@@ -102,29 +102,6 @@ const projectList = [
   {
     'id' : 4,
     'featured' : 'no',
-    'title' : 'Melody Fusion',
-    'headline' : 'Where Music, Technology, and Artistry Converge',
-    'displa_img' : 'melody-fusion/01.jpg',
-    'images' : [
-      'melody-fusion/02.png', 
-      'melody-fusion/03.png', 
-      'melody-fusion/04.png', 
-      'melody-fusion/05.png', 
-    ],
-    'links' : '/',
-    'tags' : 'FullStack',
-    'platform' : 'Web App',
-    'timeline' : 'August 2023',
-    'role' : 'Developer',
-    'redirects' : [ { 'website': '/', 'github': 'https://github.com/Ekpo-Emmanuel/Music2' } ],
-    'technologies' : 'Javascript, Superbase, PHP, API',
-    'description' : 'lorem ipsum',
-    'short_description': ' A dynamic and immersive music web app meticulously crafted using JavaScript. Immerse yourself in the world of melodies as it seamlessly blends the power of server-side processing with the interactivity of client-side scripting. Dive into a vast genre-spanning music library at your fingertips. With a sleek JavaScript interface, effortlessly explore playlists, artists, and albums.',
-    'process': ""
-  },
-  {
-    'id' : 5,
-    'featured' : 'no',
     'title' : 'Fithub',
     'headline' : 'Fitness Website for Fitness Enthusiasts',
     'displa_img' : 'fithub-WebApp/011.png',
@@ -148,6 +125,29 @@ const projectList = [
     'description' : 'lorem ipsum',
     'short_description': 'The Landing Page is meticulously designed with a tech stack tailored to my preferences. JavaScript and PHP bring interactivity and server-side functionality, while APIs effortlessly connect and fetch data. The combination of HTML and CSS ensures a visually appealing and responsive design. This tech stack reflects my commitment to creating a personalized and engaging landing page for fitness enthusiasts.',
     'process': ' <div className="features"> <p className="title">Features</p> <ul><li>Intuitive User Interface: <span>Enjoy a modern and user-friendly interface, ensuring a seamless and visually engaging experience for users of all fitness levels.</span></li> <li>Goal Achievement Rewards: <span>Celebrate milestones and achievements with a built-in rewards system, motivating users to stay committed to their fitness objectives.</span></li> <li>Assignment and Grading <span> incorporates a robust grading feature that simplifies the assessment process. </span></li> <li>Interactive Progress Charts: <span>Visualize progress over time with interactive charts and graphs, allowing users to analyze trends and make informed adjustments to their fitness routines.</span></li><li>Communication Platform: <span>Established an efficient messaging platform, facilitating seamless communication among users for enhanced collaboration.</span></li> </ul> </div>'
+  },
+  {
+    'id' : 5,
+    'featured' : 'no',
+    'title' : 'Melody Fusion',
+    'headline' : 'Where Music, Technology, and Artistry Converge',
+    'displa_img' : 'melody-fusion/01.jpg',
+    'images' : [
+      'melody-fusion/02.png', 
+      'melody-fusion/03.png', 
+      'melody-fusion/04.png', 
+      'melody-fusion/05.png', 
+    ],
+    'links' : '/',
+    'tags' : 'FullStack',
+    'platform' : 'Web App',
+    'timeline' : 'August 2023',
+    'role' : 'Developer',
+    'redirects' : [ { 'website': '/', 'github': 'https://github.com/Ekpo-Emmanuel/Music2' } ],
+    'technologies' : 'Javascript, Superbase, PHP, API',
+    'description' : 'lorem ipsum',
+    'short_description': ' A dynamic and immersive music web app meticulously crafted using JavaScript. Immerse yourself in the world of melodies as it seamlessly blends the power of server-side processing with the interactivity of client-side scripting. Dive into a vast genre-spanning music library at your fingertips. With a sleek JavaScript interface, effortlessly explore playlists, artists, and albums.',
+    'process': ""
   },
 ];
 
