@@ -6,6 +6,7 @@ const projectList = [
     'headline' : 'Empowering Effortless File Sharing',
     'displa_img' : 'file-share/01.jpg',
     'images' : [
+      'file-share/01.jpg',
       'file-share/02.png', 
       'file-share/03.png', 
       'file-share/04.png', 
