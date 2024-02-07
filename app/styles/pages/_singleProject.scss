@@ -1,6 +1,6 @@
 .Single-project {
     // padding-top: 100px;
-    background-color: $white-color;
+    // background-color: $white-color;
     @include padding(70px, 50px);
     @media (max-width: map-get($breakpoints, 'md')) {
         padding-top: 20px;
@@ -219,7 +219,6 @@
                 line-height: 25px;
                 @media (max-width: map-get($breakpoints, 'md')) {
                     width: unset;
-                    font-size: 16px;
                 }
             }
 
@@ -233,10 +232,9 @@
                     li {
                         display: grid;
                         gap: 5px;
-                        font-weight: 800;
+                        font-weight: 900;
                         span {
                             font-weight: 400;
-                            font-size: 15px;
                         }
                     }
                 }
