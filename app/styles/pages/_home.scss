@@ -1,5 +1,6 @@
 .hero {
     margin-top: 100px;
+    background-color: inherit;
     .container {
         @include maxWidth;
         @include padding;
