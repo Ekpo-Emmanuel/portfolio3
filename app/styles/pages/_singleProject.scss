@@ -110,15 +110,8 @@
             }
             .about {
                 display: grid;
-                gap: 20px;
                 p {
-                    font-size: 25px;
-                    font-weight: 600;
-
-                    font-family: $fourth-font;
-                    @media (max-width: map-get($breakpoints, 'md')) {
-                        font-size: 20px;
-                    }
+                    @include title;
                 }
                 span {
                     font-family: $fifth-font;
@@ -204,13 +197,7 @@
                 padding: 30px 20px 20px 20px;
             }
             p {
-                font-size: 25px;
-                font-weight: 600;
-
-                font-family: $fourth-font;
-                @media (max-width: map-get($breakpoints, 'md')) {
-                    font-size: 20px;
-                }
+                @include title;
             }
             span {
                 font-family: $fifth-font;

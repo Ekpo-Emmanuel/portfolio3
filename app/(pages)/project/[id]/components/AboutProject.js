@@ -6,7 +6,7 @@ export default function AboutProject({ project }) {
   return (
     <div className='details'>
         <div className='about'>
-            <p>About the project</p>
+            <p>Description</p>
             <span>{project.short_description}</span>
             <div className='link'>
                 {

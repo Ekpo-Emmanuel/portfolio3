@@ -71,6 +71,8 @@
             display: grid;
             gap: 40px;
             .selectWork-title {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 10px;
                 .title { @include title; }
             }
          .project-container {
@@ -83,6 +85,7 @@
              @media (max-width: map-get($breakpoints, 'sm')) {
                 grid-template-columns: 1fr; 
                 gap: 0px 25px; 
+                margin-top: 50px;
              }
              .item {
                  display: flex;
