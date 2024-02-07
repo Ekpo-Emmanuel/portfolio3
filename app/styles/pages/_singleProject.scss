@@ -1,5 +1,6 @@
 .Single-project {
     // padding-top: 100px;
+    background-color: $white-color;
     @include padding(70px, 50px);
     @media (max-width: map-get($breakpoints, 'md')) {
         padding-top: 20px;
@@ -151,7 +152,6 @@
                 }
             }
             .link {
-                margin-top: 30px;
                 order: 4;
                 display: flex;
                 gap: 20px;
@@ -161,8 +161,8 @@
                 }
                 p {
                     font-size: 18px;
-                    font-weight: 500;
-                    text-decoration: underline;
+                    font-weight: 400;
+                    // text-decoration: underline;
                     background-color: $blue-color;
                     color: $white-color;
                     padding: 10px 15px;

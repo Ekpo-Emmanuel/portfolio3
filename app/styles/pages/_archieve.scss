@@ -10,16 +10,7 @@ section {
         @media screen and (max-width: map-get($breakpoints, 'sm')) {
             padding-top: 100px;
         }
-        .title {
-            font-size: $header-size;
-            font-family: $fourth-font;
-            @media screen and (max-width: map-get($breakpoints, 'md')) {
-                font-size: 1.6em;
-            }
-            @media screen and (max-width: map-get($breakpoints, 'sm')) {
-                font-size: 1.4em;
-            }
-        }
+        .title { @include title; }
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;

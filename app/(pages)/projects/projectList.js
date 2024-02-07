@@ -79,7 +79,7 @@ const projectList = [
     'id' : 3,
     'featured' : 'no',
     'title' : 'Exam-Sphere',
-    'headline' : 'An examination scheduling platform for Alexander college students and teachers',
+    'headline' : 'An exam scheduling platform for Alexander college students and teachers',
     'displa_img' : 'exam-sphere/01.png',
     'images' : [
       // 'exam-sphere/02.png'

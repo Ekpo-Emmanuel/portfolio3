@@ -38,8 +38,8 @@ const projectContainer = ({ projects}) => {
   return (
     <>
     <div className='section2'>
-      <div className='tags'>
-          {/* <p className='title'>Tags:</p>
+      {/* <div className='tags'>
+          <p className='title'>Tags:</p>
           <ul>
           {tags.map((tag, index) => (
               <li
@@ -48,14 +48,15 @@ const projectContainer = ({ projects}) => {
                   className={index === activeTag ? 'active' : ''}
               >{tag}</li>
           ))}
-          </ul> */}
-      </div>
+          </ul>
+      </div> */}
+        <div className='selectWork-title'>
+            {/* <h2 className="h2" id="work">Featured Works</h2> */}
+            <p className="title">Selected Works</p>
+        </div>
       <div className='project-container' >
           {filteredProjects.map((project) => (
             <div className='item' key={project.id} >
-                 <div className='selectWork-title'>
-                    <h2 className="h2" id="work">Featured Works</h2>
-                </div>
                 <div className='image'>
                     <Link href={`/project/${project.id}`}> 
                         <img src={`/assets/images/projects/${project.displa_img}`} alt={project.title}/>
@@ -72,12 +73,11 @@ const projectContainer = ({ projects}) => {
                                 {project.technologies.split(', ').map((technology, index) => (
                                 <li key={index}>{technology}</li>
                                 ))}
-
                             </ul>
                         </div>  
                         <Link href={`/project/${project.id}`}> 
                             <div className='title'>
-                                <p> {project.title} </p>
+                                <p> {project.title} <ArrowUpRight /></p>
                                 <span>{project.headline}</span>
                             </div>
                         </Link>

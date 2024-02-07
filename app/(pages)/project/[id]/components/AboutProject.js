@@ -20,7 +20,7 @@ export default function AboutProject({ project }) {
                     : 
                     <>
                     <Link href={project.redirects[0].website} target="_blank">
-                        <p>Live Website <ArrowUpRight /></p>
+                        <p>View Live <ArrowUpRight /></p>
                     </Link>
                     <Link href={project.redirects[0].github} target="_blank"><Github /></Link>
                     </>

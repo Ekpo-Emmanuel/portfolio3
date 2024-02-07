@@ -43,6 +43,13 @@ $base-font-size: 14px;
     }
 }
 
+@mixin title {
+  font-size: $header-size;
+  font-family: $fourth-font;
+  cursor: default;
+  @media screen and (max-width: map-get($breakpoints, 'md')) { font-size: 1.6em; }
+  @media screen and (max-width: map-get($breakpoints, 'sm')) { font-size: 1.4em; }
+}
 
 
 //breakpoints
