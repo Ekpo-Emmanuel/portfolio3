@@ -18,8 +18,9 @@ export default function RootLayout({ children }) {
         rel="icon"
         href="/assets/images/logo_dark.png"
         type="image/png"
+        sizes="32x32"
       />
-      <Meta />
+      {/* <Meta /> */}
       </head>
       <body>
         <Header />
