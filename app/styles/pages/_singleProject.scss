@@ -110,6 +110,7 @@
             }
             .about {
                 display: grid;
+                gap: 20px;
                 p {
                     @include title;
                 }
@@ -120,6 +121,7 @@
                     line-height: 25px;
                     @media (max-width: map-get($breakpoints, 'md')) {
                         width: unset;
+                        font-size: 16px;
                     }
                 }
             }
