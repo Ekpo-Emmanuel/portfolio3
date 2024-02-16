@@ -25,11 +25,9 @@ section {
                    overflow: hidden;
                    position: relative;
                    outline: 1px solid rgba(128, 128, 128, 0.167);
-                //    @media (max-width: map-get($breakpoints, 'md')) {
-                //        height: 400px;
-                //    }
                    @media (max-width: map-get($breakpoints, 'sm')) {
                        height: unset;
+                       outline: none;
                    }
                    img {
                        width: 100%;
