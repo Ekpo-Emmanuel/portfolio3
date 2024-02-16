@@ -81,11 +81,11 @@
              gap: 100px 50px;             
              margin-top: 50px;  
              @media (max-width: map-get($breakpoints, 'md')) {
-                 grid-template-columns: 1fr 1fr; 
+                 grid-template-columns: 1fr; 
              }
              @media (max-width: map-get($breakpoints, 'sm')) {
-                grid-template-columns: 1fr; 
                 gap: 0px 25px; 
+                margin-top: 0px;  
              }
              .item {
                  display: flex;
@@ -112,7 +112,7 @@
                         height: auto;
                         object-fit: cover;
                         transition: 2s ease-in-out;
-                        @media (max-width: map-get($breakpoints, 'sm')) {
+                        @media (max-width: map-get($breakpoints, 'md')) {
                             border-radius: 15px;
                         }
                     }
