@@ -113,7 +113,7 @@
                         object-fit: cover;
                         transition: 2s ease-in-out;
                         @media (max-width: map-get($breakpoints, 'md')) {
-                            border-radius: 15px;
+                            border-radius: 5px;
                         }
                     }
                     .redirects {
