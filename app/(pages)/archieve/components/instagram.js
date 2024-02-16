@@ -3,7 +3,7 @@ export default function Instagram() {
     <div className="archieve-container">
         <p className="title">Gallery</p>
         <div className="container">
-            <div class="row"> 
+            <div className="row"> 
                 <div className="column">
                     <img src="/assets/images/Instagram/1.jpg" />
                     <img src="/assets/images/Instagram/2.jpg" />
