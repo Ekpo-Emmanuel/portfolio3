@@ -22,7 +22,7 @@ function Header() {
         { title: 'Projects', url: '/projects' },
         { title: 'About', url: '/about' },
         { title: 'Contact', url: '/contact' },
-        { title: 'My Blog', url: blog },
+        // { title: 'My Blog', url: blog },
     ]
 
     const logo = allDetails[0].logo;
@@ -68,12 +68,21 @@ function Header() {
             <ul>
                 <li>
                   <span>
-                    <Link href="/archieve" target={"_blank"}><span>Archieve</span></Link>
+                    <Link href={blog} target={"_blank"}><span>Blog</span></Link>
+                  </span>
+                  <ArrowUpRight />
+                </li>
+            </ul>
+            <ul>
+                <li>
+                  <span>
+                    <Text />
+                    <Link href='/archieve' target={"_blank"}><span>Archieve</span></Link>
                   </span>
                   <FolderArchive />
                 </li>
             </ul>
-            <ul>
+            {/* <ul>
                 <li>
                   <span>
                     <Text />
@@ -81,7 +90,7 @@ function Header() {
                   </span>
                   <ArrowUpRight />
                 </li>
-            </ul>
+            </ul> */}
           </div>
         )}
       </div>
