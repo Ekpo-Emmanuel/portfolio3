@@ -61,7 +61,7 @@ const About = () => {
               {Links.map((link, index) => (
                 <Link href={link.url} key={index} target='_blank' className='link'>{link.icon}</Link>
               ))}
-              <Link href={resume} target='_blank' className='link'><span>Resume</span></Link>
+              {/* <Link href={resume} target='_blank' className='link'><span>Resume</span></Link> */}
             </div>
           </div>
         </div>

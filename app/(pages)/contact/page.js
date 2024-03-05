@@ -20,11 +20,11 @@ export default function Contact() {
             'url': github,
             'active': 'yes'
         },
-        {
-            'title': 'Resume',
-            'url': resume,
-            'active': 'yes'
-        },
+        // {
+        //     'title': 'Resume',
+        //     'url': resume,
+        //     'active': 'yes'
+        // },
         {
             'title': 'Blog',
             'url': blog,
@@ -53,9 +53,9 @@ export default function Contact() {
             <div className='sec1'>
                 <p>Let's build something great!</p>
                 <Link href={email} target="_blank"><span>ekpoemmanuelsg@gmail.com</span></Link>
-                <Link href={resume}>
+                {/* <Link href={resume}>
                     <span>My Resume <Lock /></span>
-                </Link>
+                </Link> */}
             </div>
             <div className='sec2'>
                 <ul>

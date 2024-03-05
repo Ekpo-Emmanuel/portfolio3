@@ -38,7 +38,7 @@ function Header() {
       <div className={open ? 'container min' : 'container'}>
         <Link href="/">
           <div className='logo'>
-            <img src={logo} alt='logo' height={35} width={35} />
+            <img src={logo} alt='logo' height={25} />
           </div>
         </Link>
         <div className='menu-container'>

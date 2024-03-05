@@ -66,7 +66,6 @@ const projectContainer = ({ projects}) => {
                         <Link href={project.redirects[0].website} target="_blank"><ArrowUpRight /></Link>
                     </div>
                 </div>
-                {/* <Link href={`Single-Project?id=${project.id}`}> */}
                     <div className='details'>
                         <div className='stack'>
                             <ul>
@@ -100,7 +99,6 @@ const projectContainer = ({ projects}) => {
                             }
                         </div>
                     </div>
-                {/* </Link> */}
             </div>
           ))}
       </div>
